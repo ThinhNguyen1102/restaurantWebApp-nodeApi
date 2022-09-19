@@ -39,8 +39,8 @@ const fileFilter = (req, file, cb) => {
 
 app.use(bodyParser.json());
 app.use(helmet());
-app.use(cors());
 app.use(morgan("common"));
+app.use(cors());
 
 app.use(
   multer({ storage: fileStorage, fileFilter: fileFilter }).single("image")
