@@ -61,6 +61,10 @@ app.use((error, req, res, next) => {
   });
 });
 
+app.use("/", (req, res) => {
+  res.status.json({ message: "hello restaurant-webapp nodejs api!" });
+});
+
 connectDb();
 
 app.listen(port, () => {
